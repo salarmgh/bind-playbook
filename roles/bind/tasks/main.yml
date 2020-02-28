@@ -1,0 +1,6 @@
+---
+- name: Install bind
+  include_tasks: bind.yml
+
+- name: Configure bind
+  include_tasks: configure.yml

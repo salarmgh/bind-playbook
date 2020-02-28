@@ -1,0 +1,13 @@
+---
+- name: Install Bind.
+  apt:
+    name: "{{ bind_package }}={{ bind_version }}"
+    state: "{{ bind_package_state }}"
+    update_cache: true
+  notify: restart docker
+
+- name: Ensure Bind is started and enabled at boot.
+  service:
+    name: bind9
+    state: "{{ bind_service_state }}"
+    enabled: "{{ bind_service_enabled }}"

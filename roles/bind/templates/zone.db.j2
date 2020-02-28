@@ -1,0 +1,12 @@
+$TTL    604800
+@       IN      SOA     sample.local. contact@sample.local. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+ns.sample.local.          IN      A       1.1.1.1
+@       IN      NS      ns.sample.local.
+@       IN      A       1.1.1.1
+rest    IN      A       1.1.1.1
