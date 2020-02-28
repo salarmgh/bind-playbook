@@ -1,2 +1,2 @@
-- name: restart docker
+- name: restart bind
   include: restart_bind.yml
